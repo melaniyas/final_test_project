@@ -32,7 +32,7 @@ class ProductPage(BasePage):
 
     def should_be_disappeared(self):
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
-            "Success message is presented, but should not be"
+            "Success message is presented, but should not disapperreared"
 
     # проверяем существование кнопки добавления товара в корзину
     def should_be_add_to_basket_btn(self):
