@@ -9,23 +9,6 @@ import time
 
 
 class ProductPage(BasePage):
-    # def __init__(self, browser, url, timeout=10):
-    #     self.browser = browser
-    #     self.url = url
-    #     self.browser.implicitly_wait(timeout)
-    #
-    # # открываем станицу
-    # def open(self):
-    #     self.browser.get(self.url)
-    #
-    # # проверяем что элемент есть на странице
-    # def is_element_present(self, how, what):
-    #     try:
-    #         self.browser.find_element(how, what)
-    #     except (NoSuchElementException):
-    #         return False
-    #     return True
-
     # проверяем что элемент не появляется на странице в течение заданного времени
     def is_not_element_present(self, how, what, timeout=4):
         try:
@@ -95,10 +78,3 @@ class ProductPage(BasePage):
             if item_strong.text == product_name:
                 names_equal = True
         assert names_equal, "Names of product isn't equal"
-
-    # def go_to_login_page(self):
-    #     link = self.browser.find_element(*BasePageLocators.LOGIN_LINK_INVALID)
-    #     link.click()
-    #
-    # def should_be_login_link(self):
-    #     assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
